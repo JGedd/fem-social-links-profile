@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --green: hsl(75, 94%, 57%);
+
+  --white: hsl(0, 0%, 100%);
+
+  --light-grey: hsl(0, 0%, 20%);
+  --medium-grey: hsl(0, 0%, 12%);
+  --dark-grey: hsl(0, 0%, 8%);
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base styles */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Inter', serif;
+  background-color: var(--dark-grey);
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 400;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile {
+  background-color: var(--medium-grey);
+  width: 38.4rem;
+  height: 61.1rem;
+  border-radius: 1.2rem;
+  padding: 4rem;
+  margin: auto 2.4rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.profile__img {
+  display: block;
+  width: 8.8rem;
+  height: 8.8rem;
+  border-radius: 50%;
+  margin-bottom: 2.4rem;
+}
+
+.profile__heading {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.profile__sub-heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--green);
+  margin-bottom: 2.4rem;
+}
+
+.profile__text {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 2.4rem;
+}
+
+.socials {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.socials li {
+  display: inline-block;
+  width: 30.4rem;
+  height: 4.5rem;
+  padding: 1.2rem 0;
+  background-color: var(--light-grey);
+  border-radius: 0.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials li a {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--white);
+  text-decoration: none;
+  transition: all ease 0.3s;
+}
+
+.socials li a:hover {
+  cursor: pointer;
+  color: var(--green);
+}
+
+@media screen and (max-width: 375px) {
+  .profile {
+    background-color: var(--medium-grey);
+    width: 32.7rem;
+    height: 57.9rem;
+    padding: 2.4rem;
+  }
+
+  .socials li {
+    width: 27.9rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .profile {
+    width: 28rem;
+    height: 54rem;
+    padding: 2rem;
+    margin: auto 1.6rem;
+  }
+
+  .profile__img {
+    width: 7.2rem;
+    height: 7.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .profile__heading {
+    font-size: 2rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .profile__sub-heading {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .profile__text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .socials {
+    gap: 1.2rem;
+  }
+
+  .socials li {
+    width: 24rem;
+    height: 4rem;
+    padding: 1rem 0;
+  }
+
+  .socials li a {
+    font-size: 1.2rem;
+  }
+}
